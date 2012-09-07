@@ -10,13 +10,13 @@ Grab provides an clean way to fetch multiple values from a hash. Instead of:
 you can write:
 
     def initialize(params)
-      foo, bar = opts.grab(:foo, :bar)
+      foo, bar = params.grab(:foo, :bar)
     end
 
 or if some of your params are optional:
 
     def initialize(params)
-      foo, bar = opts.values(:foo, :bar)
+      foo, bar = params.values(:foo, :bar)
     end
 
 ## Installation
