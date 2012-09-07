@@ -3,7 +3,7 @@
 Grab provides an clean way to fetch multiple values from a hash. Instead of:
 
 ```
-def my_method(opts)
+def initialize(opts)
   foo = opts.fetch(:foo)
   bar = opts.fetch(:bar)
 end
@@ -12,7 +12,7 @@ end
 you can write:
 
 ```
-def my_method(opts)
+def initialize(opts)
   foo, bar = opts.grab(:foo, :bar)
 end
 ```
