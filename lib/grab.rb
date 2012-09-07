@@ -1,5 +1,11 @@
 require "grab/version"
 
 module Grab
-  # Your code goes here...
+  def grab(*keys)
+    keys.map { |k| self.fetch(k) }
+  end
+end
+
+class Hash
+  include Grab
 end

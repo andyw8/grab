@@ -1,6 +1,21 @@
 # Grab
 
-TODO: Write a gem description
+Grab provides an clean way to fetch multiple values from a hash. Instead of:
+
+```
+def my_method(opts)
+  foo = opts.fetch(:foo)
+  bar = opts.fetch(:bar)
+end
+```
+
+you can write:
+
+```
+def my_method(opts)
+  foo, bar = opts.grab(:foo, :bar)
+end
+```
 
 ## Installation
 
@@ -15,10 +30,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install grab
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
