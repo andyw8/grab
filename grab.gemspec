@@ -14,4 +14,5 @@ Gem::Specification.new do |gem|
   gem.name          = "grab"
   gem.require_paths = ["lib"]
   gem.version       = Grab::VERSION
+  gem.add_development_dependency "rspec"
 end
