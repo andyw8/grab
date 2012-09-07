@@ -1,17 +1,23 @@
 require "grab/version"
 
-class Hash
-  alias_method :old_values, :values
+module Grab
+  class ::Hash
+    alias_method :orig_values, :values
 
-  def grab(*keys)
-    keys.map { |k| self.fetch(k) }
-  end
+    def grab(*keys)
+      keys.map { |k| self.fetch(k) }
+    end
 
-  def values(*args)
-    if args.empty?
-      old_values
-    else
-      args.map { |k| self[k] }
+    def values(*args)
+      if args.empty?
+        orig_values
+      else
+        args.map { |k| self[k] }
+      end
     end
   end
+end
+
+class Hash
+  include Grab
 end
