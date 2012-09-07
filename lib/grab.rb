@@ -8,7 +8,7 @@ class Hash
   end
 
   def values(*args)
-  	if args.nil?
+    if args.nil?
       old_values
     else
       args.map { |k| self[k] }
