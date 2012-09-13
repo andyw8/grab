@@ -2,7 +2,7 @@
 
 # Grab
 
-Grab provides an clean way to fetch multiple values from a hash. Instead of:
+Grab provides an clean way to retrieve multiple values from a hash. Instead of:
 
     def initialize(params)
       foo = params[:foo]
@@ -15,11 +15,7 @@ you can write:
       foo, bar = params.grab(:foo, :bar)
     end
 
-or if want to use Array#fetch instead of Array#[]:
-
-    def initialize(params)
-      foo, bar = params.grab!(:foo, :bar)
-    end
+If want a KeyError to be raised when a key is missing use `grab!` instead of `grab`.
 
 ## Installation
 
