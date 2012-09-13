@@ -15,7 +15,7 @@ you can write:
       foo, bar = params.grab(:foo, :bar)
     end
 
-If want a KeyError to be raised when a key is missing use `grab!` instead of `grab`.
+If you prefer a KeyError to be raised when a key is missing (like Array#fetch) then use `grab!` instead of `grab`.
 
 ## Installation
 
