@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/andyw8/grab.png)](http://travis-ci.org/andyw8/grab)
+
 # Grab
 
 Grab provides an clean way to fetch multiple values from a hash. Instead of:
