@@ -3,8 +3,8 @@
 Grab provides an clean way to fetch multiple values from a hash. Instead of:
 
     def initialize(params)
-      foo = params.fetch(:foo)
-      bar = params.fetch(:bar)
+      foo = params[:foo]
+      bar = params[:bar]
     end
 
 you can write:
@@ -13,10 +13,10 @@ you can write:
       foo, bar = params.grab(:foo, :bar)
     end
 
-or if some of your params are optional:
+or if want to use Array#fetch instead of Array#[]:
 
     def initialize(params)
-      foo, bar = params.values(:foo, :bar)
+      foo, bar = params.grab!(:foo, :bar)
     end
 
 ## Installation
